@@ -1,1 +1,1 @@
-# shared-todolist
+# React + Vite
