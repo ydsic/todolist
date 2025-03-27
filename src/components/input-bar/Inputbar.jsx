@@ -7,6 +7,9 @@ function Inputbar({todoList, setTodoList, input, setInput}) {
   function pushText() {
     if (input.trim() === "") return;
     setTodoList([...todoList, {text: input, done: false}]);
+    const savedList = JSON.parse(localStorage.getItem('todolist')) || [];
+    const updateList = [...savedList, {text: input, done: false}];
+    localStorage.setItem('todolist', JSON.stringify(updateList));
     setInput("");
   }
 

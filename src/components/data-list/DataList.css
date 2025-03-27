@@ -1,5 +1,7 @@
 
 .showList {
+  position: relative;
+  top: 6vh;
   height: 84vh;
   margin: auto;
   overflow-y: auto;
