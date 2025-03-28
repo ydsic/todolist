@@ -17,19 +17,26 @@ function Home() {
   const [darkmod, setDarkMod] = useState(false);
 
   useEffect(() => {
-    const getList =  JSON.parse(localStorage.getItem('todolist')) || [];
+    const getList = JSON.parse(localStorage.getItem("todolist")) || [];
+    setDarkMod(localStorage.getItem("mod"));
     setTodoList(getList);
-  }, []) 
+  }, []);
 
   return (
-    <div className={darkmod ? 'Theme_Dark' : 'Theme_light'}>
-      <Title setTodoList={setTodoList} darkmod={darkmod} setDarkMod={setDarkMod} />
-      <DataList
-        todoList={todoList}
+    <div className={darkmod ? "Theme_Dark" : "Theme_light"}>
+      <Title
         setTodoList={setTodoList}
-        input={input}
-        setInput={setInput}
+        darkmod={darkmod}
+        setDarkMod={setDarkMod}
       />
+
+        <DataList
+          todoList={todoList}
+          setTodoList={setTodoList}
+          input={input}
+          setInput={setInput}
+        />
+
       <Inputbar
         todoList={todoList}
         setTodoList={setTodoList}

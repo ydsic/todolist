@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash } from '@fortawesome/free-solid-svg-icons';
 
+import "./DataList.css";
+
 function DataList({todoList, setTodoList}) {
   function deleteList(deleteIndex) {
     const newList = todoList.filter((_, index) => index !== deleteIndex);
