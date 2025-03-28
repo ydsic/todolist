@@ -4,15 +4,16 @@
   justify-content: center;
   align-items: stretch;
   position: fixed;
-  bottom: -1px;
+  bottom: -2px;
   white-space: nowrap;
-  border-top: 2px solid black;
+  border-top: 2px solid var(--border-color);
 }
 
 .inputBar > input, .addButton {
-  height: 50px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  height: 7vh;
   border: none;
-  background-color: white;
   font-weight: 900;
 }
 
@@ -28,6 +29,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border-left: 2px solid black;
+  border-left: 2px solid var(--border-color);
   box-sizing: border-box;
 }

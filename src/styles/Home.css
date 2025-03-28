@@ -1,9 +1,21 @@
-body {
-  background-color: white;
+:root {
+  --bg-color: #F5F5F5;
+  --text-color: #121212;
+  --subtext-color: #666666;
+  --accent-color: #1E88E5;
+  --error-color: #E53935;
+  --border-color: #121212;
 }
+
+
+.Theme_Dark {
+  --bg-color: #121212;
+  --text-color: #E0E0E0;
+  --border-color: #E0E0E0;
+}
+
 
 .done {
   text-decoration: line-through;
-  color: gray;
+  color: #A0A0A0;
 }
-

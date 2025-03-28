@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import "../styles/reset.css";
 import "../styles/Home.css";
 
-import Header from "../components/Header/Title.jsx";
-import "../components/Header/Title.css";
+import Title from "../components/title/Title.jsx";
+import "../components/title/Title.css";
 
 import DataList from "../components/data-list/DataList";
 import "../components/data-list/DataList.css";
@@ -14,6 +14,7 @@ import "../components/input-bar/Inputbar.css";
 function Home() {
   const [todoList, setTodoList] = useState([]);
   const [input, setInput] = useState("");
+  const [darkmod, setDarkMod] = useState(false);
 
   useEffect(() => {
     const getList =  JSON.parse(localStorage.getItem('todolist')) || [];
@@ -21,8 +22,8 @@ function Home() {
   }, []) 
 
   return (
-    <>
-      <Header setTodoList={setTodoList} />
+    <div className={darkmod ? 'Theme_Dark' : 'Theme_light'}>
+      <Title setTodoList={setTodoList} darkmod={darkmod} setDarkMod={setDarkMod} />
       <DataList
         todoList={todoList}
         setTodoList={setTodoList}
@@ -35,7 +36,7 @@ function Home() {
         input={input}
         setInput={setInput}
       />
-    </>
+    </div>
   );
 }
 
